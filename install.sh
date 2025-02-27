@@ -7,6 +7,7 @@ if [[ -n "$1" && "$1" == "link" ]]; then
    git clone https://github.com/jbshep/devopsdotfiles .dotfiles
    cd .dotfiles
    for f in ${files[@]}; do
+    rm -f $HOME/$f
    	ln -s $PWD/$f $HOME/$f 
    done 
 
